@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="section">
+        
+       
+    </div>
+    <title>SuperSign</title>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #000; /* Background color of the body */
+            color: #fff; /* Text color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%; /* Full height */
+            background: rgba(0, 0, 0, 0.7); /* Transparent black */
+            padding: 20px;
+            z-index: 1000; /* Ensures the menu is on top */
+            box-sizing: border-box;
+        }
+        .menu a {
+            color: #fff; /* Link color */
+            text-decoration: none;
+            display: block;
+            padding: 10px 0;
+        }
+        .close-btn {
+            color: red; /* Close button color */
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            cursor: pointer; /* Pointer on hover */
+        }
+        .section {
+            display: none; /* Hide sections initially */
+            margin: 100px; /* Space from the top */
+            padding: 20px;
+            background-color: #800000; /* Dark red background */
+            color: #fff; /* Text color */
+            border: 2px solid #ff0000; /* Red border */
+            box-sizing: border-box;
+        }
+        .dns-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            background-color: #ff0000; /* Button background color */
+            color: white; /* Button text color */
+            border: none;
+            cursor: pointer;
+            text-decoration: none; /* Remove underline */
+        }
+        .menu-toggle {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none; /* Hide elements with this class */
+        }
+    </style>
+</head>
+<body>
+    <!-- Hamburger Menu Icon -->
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+
+    <!-- Sidebar Menu -->
+    <div class="menu hidden" id="menu">
+        <h2>Menu</h2>
+        <a href="#" onclick="showSection('dns')">DNS</a>
+        <a href="#" onclick="showSection('ipa-signers')">IPA Signers</a>
+        <a href="#" onclick="showSection('certificates')">Certificates</a>
+        <a href="#" onclick="showSection('roblox-executors')">Roblox Executors</a>
+        <span class="close-btn" onclick="toggleMenu()">X</span>
+    </div>
+
+    <!-- DNS Section -->
+    <div id="dns" class="section">
+        <h2>DNS</h2>
+        <p>In this section, you can download DNS which would stop revokes. REVOKES ONLY.</p>
+        <p>Theres also more DNS on our discord! -discord.gg/ejUdXamrmv-</p>
+        <div id="khoindvn">
+            <h3>Khoindvn DNS</h3>
+            <a href="https://github.com/khoindvnDNS/iOS/raw/main/DNS/khoindns.mobileconfig" class="dns-button" target="_blank">Visit Khoindvn</a>
+        </div>
+        <div id="anti-revoke">
+            <h3>Anti Revoke DNS</h3>
+            <a href="https://github.com/toasty-dev/Khomod/raw/7401ca4719c9080a96ee902f800ebf009f08912b/khomod.mobileconfig" class="dns-button" target="_blank">Visit Anti Revoke</a>
+        </div>
+        <div id="qstatic">
+            <h3>Qstatic DNS</h3>
+            <a href="https://github.com/char843vvv/qstaticdns/releases/download/dns/qstaticdns.mobileconfig" class="dns-button" target="_blank">Visit Qstatic</a>
+        </div>
+    </div>
+
+    <!-- IPA Signers Section -->
+    <div id="ipa-signers" class="section">
+        <h2>IPA Signers</h2>
+        <p>Content for IPA Signers goes here.</p>
+    </div>
+
+    <!-- Certificates Section -->
+    <div id="certificates" class="section">
+        <h2>Certificates</h2>
+        <p>Content for Certificates goes here.</p>
+    </div>
+
+    <!-- Roblox Executors Section -->
+    <div id="roblox-executors" class="section">
+        <h2>Roblox Executors</h2>
+        <p>Content for Roblox Executors goes here.</p>
+    </div>
+
+    <script>
+        // Function to hide all sections
+        function hideAllSections() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+        }
+
+        // Function to show a specific section by ID
+        function showSection(sectionId) {
+            hideAllSections(); // Hide all sections first
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.style.display = 'block'; // Show the selected section
+            }
+        }
+
+        // Toggle the menu's visibility
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('hidden'); // Add or remove the 'hidden' class
+        }
+
+        // Show DNS section by default when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('dns'); // Show DNS section on page load
+        });
+    </script>
+</body>
+</html>
