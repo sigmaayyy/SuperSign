@@ -1,0 +1,22 @@
+html, body {
+    height: 100%; /* Ensure the gradient covers the entire page */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom right, #8B0000, #000000); /* Dark red to black gradient */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Start content from the top */
+    min-height: 100vh; /* Cover full viewport height */
+}
+
+.section {
+    color: white; /* Ensure text is visible */
+    padding: 20px;
+}
+
+
+
