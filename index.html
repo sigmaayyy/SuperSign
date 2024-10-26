@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperSign</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif; 
+            color: #fff; /* White text color */
+            overflow: hidden; /* Prevents scrollbars during animation */
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background-color: #8B0000; /* Dark red */
+            }
+            50% {
+                background-color: #000000; /* Black */
+            }
+            100% {
+                background-color: #8B0000; /* Dark red */
+            }
+        }
+
+        body {
+            animation: backgroundAnimation 5s infinite alternate; /* Animation duration and repeat */
+        }
+    </style>
+</head>
+<body>
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Menu</title>
+    <style>
+        /* Hamburger Menu Styles */
+        .menu {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            z-index: 1000; /* Ensure it is on top */
+        }
+
+        .menu-line {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        /* Hidden Menu */
+        .nav-menu {
+            display: none; /* Initially hidden */
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 100%;
+            height: 100%;
+            z-index: 999; /* Below the menu button */
+            padding: 60px 20px; /* Padding for menu items */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            justify-content: space-between; /* Space between items */
+        }
+
+        .nav-menu a {
+            display: block;
+            color: #e63946; /* Bright red for links */
+            text-decoration: none;
+            margin: 15px 0;
+            font-size: 24px; /* Adjust font size */
+        }
+
+        /* Close Button */
+        .close-menu {
+            color: #e63946; /* Bright red */
+            font-size: 36px;
+            cursor: pointer;
+            margin-bottom: 20px; /* Margin for spacing */
+            align-self: flex-end; /* Align to the bottom right */
+        }
+    </style>
+</head>
+<body>
+    <div class="menu" onclick="toggleMenu()">
+        <div class="menu-line"></div>
+        <div class="menu-line"></div>
+        <div class="menu-line"></div>
+    </div>
+
+    <div class="nav-menu" id="nav-menu">
+        <a href="#ipa-signers">IPA Signers</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#roblox-executors">Roblox Executors</a>
+        <a href="#dns">DNS</a>
+        <span class="close-menu" onclick="toggleMenu()">&#10006;</span> <!-- Bright red X at bottom -->
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            const isMenuVisible = navMenu.style.display === 'block';
+            
+            // Toggle menu visibility
+            navMenu.style.display = isMenuVisible ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Menu with Sections</title>
+    <style>
+        /* Hamburger Menu Styles */
+        .menu {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            z-index: 1000; /* Ensure it is on top */
+        }
+
+        .menu-line {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        /* Hidden Menu */
+        .nav-menu {
+            display: none; /* Initially hidden */
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 100%;
+            height: 100%;
+            z-index: 999; /* Below the menu button */
+            padding: 60px 20px; /* Padding for menu items */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            justify-content: space-between; /* Space between items */
+        }
+
+        .nav-menu a {
+            display: block;
+            color: #e63946; /* Bright red for links */
+            text-decoration: none;
+            margin: 15px 0;
+            font-size: 24px; /* Adjust font size */
+        }
+
+        /* Close Button */
+        .close-menu {
+            color: #e63946; /* Bright red */
+            font-size: 36px;
+            cursor: pointer;
+            margin-bottom: 20px; /* Margin for spacing */
+            align-self: flex-end; /* Align to the bottom right */
+        }
+
+        /* Section Styles */
+        section {
+            padding: 20px;
+            margin-top: 60px; /* Add space from top */
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #e63946; /* Bright red */
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #d62839; /* Darker red on hover */
+        }
+    </style>
+</head>
+<body>
+    <div<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Hamburger Menu with Sections</title>
+            <style>
+                /* Hamburger Menu Styles */
+                .menu {
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                    cursor: pointer;
+                    z-index: 1000; /* Ensure it is on top */
+                }
+        
+                .menu-line {
+                    width: 30px;
+                    height: 4px;
+                    background-color: white;
+                    margin: 6px 0;
+                    transition: 0.4s;
+                }
+        
+                /* Hidden Menu */
+                .nav-menu {
+                    display: none; /* Initially hidden */
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(0, 0, 0, 0.8);
+                    width: 100%;
+                    height: 100%;
+                    z-index: 999; /* Below the menu button */
+                    padding: 60px 20px; /* Padding for menu items */
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                    display: flex;
+                    flex-direction: column; /* Stack items vertically */
+                    justify-content: space-between; /* Space between items */
+                }
+        
+                .nav-menu a {
+                    display: block;
+                    color: #e63946; /* Bright red for links */
+                    text-decoration: none;
+                    margin: 15px 0;
+                    font-size: 24px; /* Adjust font size */
+                }
+        
+                /* Close Button */
+                .close-menu {
+                    color: #e63946; /* Bright red */
+                    font-size: 36px;
+                    cursor: pointer;
+                    margin-bottom: 20px; /* Margin for spacing */
+                    align-self: flex-end; /* Align to the bottom right */
+                }
+        
+                /* Section Styles */
+                section {
+                    padding: 20px;
+                    margin-top: 60px; /* Add space from top */
+                    background-color: rgba(0, 0, 0, 0.8); /* Dark background for sections */
+                    color: white; /* White text for better visibility */
+                }
+        
+                h2 {
+                    font-size: 32px;
+                    margin-bottom: 10px;
+                }
+        
+                p {
+                    font-size: 18px;
+                    margin-bottom: 20px;
+                }
+        
+                button {
+                    padding: 10px 20px;
+                    background-color: #e63946; /* Bright red */
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 18px;
+                    transition: background-color 0.3s;
+                }
+        
+                button:hover {
+                    background-color: #d62839; /* Darker red on hover */
+                }
+            </style>
+        </head>
+        <body>
+            
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Hamburger Menu with Sections</title>
+                <style>
+                    /* Body and background */
+                    body {
+                        margin: 0;
+                        font-family: Arial, sans-serif;
+                        background: linear-gradient(45deg, darkred, black);
+                        color: white;
+                    }
+            
+                    /* Hamburger Menu Styles */
+                    .menu {
+                        position: absolute;
+                        top: 20px;
+                        left: 20px;
+                        cursor: pointer;
+                        z-index: 1000; /* Ensure it is on top */
+                    }
+            
+                    .menu-line {
+                        width: 30px;
+                        height: 4px;
+                        background-color: white;
+                        margin: 6px 0;
+                        transition: 0.4s;
+                    }
+            
+                    /* Hidden Menu */
+                    .nav-menu {
+                        display: none; /* Initially hidden */
+                        position: fixed; /* Change to fixed */
+                        top: 0;
+                        left: 0;
+                        background-color: rgba(0, 0, 0, 0.8);
+                        width: 100%;
+                        height: 100%;
+                        z-index: 999; /* Below the menu button */
+                        padding: 60px 20px; /* Padding for menu items */
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                        flex-direction: column; /* Stack items vertically */
+                        justify-content: flex-start; /* Align items to start */
+                    }
+            
+                    .nav-menu a {
+                        display: block;
+                        color: #e63946; /* Bright red for links */
+                        text-decoration: none;
+                        margin: 15px 0;
+                        font-size: 24px; /* Adjust font size */
+                    }
+            
+                    /* Close Button */
+                    .close-menu {
+                        color: #e63946; /* Bright red */
+                        font-size: 36px;
+                        cursor: pointer;
+                        margin-top: auto; /* Push to the bottom */
+                        align-self: flex-end; /* Align to the bottom right */
+                    }
+            
+                    /* Section Styles */
+                    section {
+                        padding: 20px;
+                        margin: 60px 0; /* Space between sections */
+                    }
+            
+                    h2 {
+                        font-size: 32px;
+                        margin-bottom: 10px;
+                    }
+            
+                    p {
+                        font-size: 18px;
+                        margin-bottom: 20px;
+                    }
+            
+                    button {
+                        padding: 10px 20px;
+                        background-color: #e63946; /* Bright red */
+                        color: white;
+                        border: none;
+                        cursor: pointer;
+                        font-size: 18px;
+                        transition: background-color 0.3s;
+                    }
+            
+                    button:hover {
+                        background-color: #d62839; /* Darker red on hover */
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="menu" onclick="toggleMenu()">
+                    <div class="menu-line"></div>
+                    <div class="menu-line"></div>
+                    <div class="menu-line"></div>
+                </div>
+            
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Sections with Animated Buttons</title>
+                    <style>
+                        /* Body and background */
+                        body {
+                            margin: 0;
+                            font-family: Arial, sans-serif;
+                            background: linear-gradient(45deg, darkred, black);
+                            color: white;
+                            overflow-y: scroll; /* Ensure scrolling */
+                        }
+                
+                        /* Section Styles */
+                        section {
+                            padding: 40px;
+                            margin: 60px 20px; /* Space between sections */
+                            background-color: rgba(0, 0, 0, 0.8); /* Dark background for sections */
+                            border-radius: 10px; /* Rounded corners */
+                            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+                        }
+                
+                        h2 {
+                            font-size: 32px;
+                            margin-bottom: 10px;
+                        }
+                
+                        p {
+                            font-size: 18px;
+                            margin-bottom: 20px;
+                        }
+                
+                        button {
+                            padding: 10px 20px;
+                            background-color: #e63946; /* Bright red */
+                            color: white;
+                            border: none;
+                            cursor: pointer;
+                            font-size: 18px;
+                            transition: transform 0.3s, background-color 0.3s; /* Animation properties */
+                            border-radius: 5px; /* Rounded corners for buttons */
+                            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+                            margin: 5px 0; /* Space between buttons */
+                        }
+                
+                        button:hover {
+                            transform: scale(1.05); /* Slightly enlarge on hover */
+                            background-color: #d62839; /* Darker red on hover */
+                        }
+                
+                        button:active {
+                            transform: scale(0.95); /* Slightly shrink on click */
+                            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow effect on click */
+                        }
+                    </style>
+                </head>
+                <body>
+
+                    <section id="ipa-signers">
+                        <h2>IPA Signers</h2>
+                        <p>
+                            Welcome to the IPA Signers section! Here, You can download apps that can sign IPA Files
+                            (iOS File Extension) Just by using a certificate.
+                        </p>
+                        <button onclick="window.location.href='https://discord.gg/NMzDtf3ay5'">Download IPA Signers</button>
+                    </section>
+                
+                    <section id="certificates">
+                        <h2>Certificates</h2>
+                        <p>
+                            In the Certificates section, You can download revoked or public certificates that
+                            you can import into an IPA Signer to download your favourite app!
+                        </p>
+                        <button onclick="window.location.href='https://discord.gg/qYQDe2tTST'">Download Certificates</button>
+                    </section>
+                
+                    <section id="roblox-executors">
+                        <h2>Roblox Executors</h2>
+                        <p>
+                            The Roblox Executors section was made to make sure you can download your favourite Executor
+                            with a direct install, signed with a public or revoked certificate, or use an IPA and get a
+                            IPA signer to download.
+                        </p>
+                        <button onclick="window.location.href='https://discord.gg/34jWJ6gdnY'">Download Roblox Executors</button>
+                    </section>
+                
+                    <section id="dns">
+                        <h2>DNS Section</h2>
+                        <p>This section contains DNS configuration files, that can help you stop revokes. Click the buttons below to download:</p>
+                        <button onclick="window.location.href='https://github.com/khoindvnDNS/iOS/raw/main/DNS/khoindns.mobileconfig'">Khoindvn DNS</button>
+                        <button onclick="window.location.href='https://github.com/char843vvv/qstaticdns/releases/download/dns/qstaticdns.mobileconfig'">Qstatic DNS</button>
+                        <button onclick="window.location.href='https://github.com/toasty-dev/Khomod/raw/7401ca4719c9080a96ee902f800ebf009f08912b/khomod.mobileconfig'">Anti Revoke DNS</button>
+                    </section>
+                </body>
+                </html>
+                

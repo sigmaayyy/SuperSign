@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif; 
+    color: #fff; /* White text color */
+    overflow: hidden; /* Prevents scrollbars during animation */
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-color: #8B0000; /* Dark red */
+    }
+    50% {
+        background-color: #000000; /* Black */
+    }
+    100% {
+        background-color: #8B0000; /* Dark red */
+    }
+}
+
+body {
+    animation: backgroundAnimation 5s infinite alternate; /* Animation duration and repeat */
+}
+
+
